@@ -7,9 +7,6 @@ inputs:
     description: "Metablock Space - can be set as METABLOCK_SPACE env variable"
   path:
     description: "Path to yaml files of blocks - can be set as METABLOCK_PATH env variable"
-  env:
-    description: "Metablock environment to modify"
-    default: "prod"
 runs:
   using: "docker"
   image: "Dockerfile"
@@ -21,5 +18,3 @@ runs:
     - ${{ inputs.token }}
     - "--space"
     - ${{ inputs.space }}
-    - "--env"
-    - ${{ inputs.env }}
