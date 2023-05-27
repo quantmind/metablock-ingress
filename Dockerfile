@@ -2,4 +2,4 @@ FROM python:3.11-slim
 
 WORKDIR /action
 
-RUN pip install metablock==0.6.2
+RUN pip install metablock==0.7.0
