@@ -18,8 +18,8 @@ runs:
     - apply
     - ${{ inputs.path }}
     - "--token"
-    - ${{ inputs.token || env.METABLOCK_API_TOKEN }}
+    - ${{ inputs.token }}
     - "--space"
-    - ${{ inputs.space || env.METABLOCK_SPACE }}
+    - ${{ inputs.space }}
     - "--env"
     - ${{ inputs.env }}

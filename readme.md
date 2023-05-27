@@ -1,5 +1,8 @@
 # metablock-ingress
 
+[![build](https://github.com/quantmind/metablock-ingress/actions/workflows/build.yml/badge.svg)](https://github.com/quantmind/metablock-ingress/actions/workflows/build.yml)
+[![test](https://github.com/quantmind/metablock-ingress/actions/workflows/test.yml/badge.svg)](https://github.com/quantmind/metablock-ingress/actions/workflows/test.yml)
+
 Actions for configuring a block ingress, see the example action for usage.
 
 ## Inputs
