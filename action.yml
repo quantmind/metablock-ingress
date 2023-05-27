@@ -1,0 +1,25 @@
+name: "Metablock Ingress Action"
+description: "Update the ingress configuration for a block"
+inputs:
+  token:
+    description: "Metablock API token - can be set as METABLOCK_API_TOKEN env variable"
+  space:
+    description: "Metablock Space - can be set as METABLOCK_SPACE env variable"
+  path:
+    description: "Path to yaml files of blocks - can be set as METABLOCK_PATH env variable"
+  env:
+    description: "Metablock environment to modify"
+    default: "prod"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - metablock
+    - apply
+    - ${{ inputs.path }}
+    - "--token"
+    - ${{ inputs.token || env.METABLOCK_API_TOKEN }}
+    - "--space"
+    - ${{ inputs.space || env.METABLOCK_SPACE }}
+    - "--env"
+    - ${{ inputs.env }}

@@ -1,0 +1,10 @@
+tags:
+  - test
+routes:
+  - name: main
+    protocols:
+      - https
+    paths:
+      - /test
+    tags:
+      - test
